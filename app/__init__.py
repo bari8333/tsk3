@@ -9,7 +9,7 @@ def create_app():
     app.config.from_object('config.Config')
     db.init_app(app)
 
-    # Register Blueprint with URL prefix
+
     from app.routes import api
     app.register_blueprint(api, url_prefix='/api')
 
